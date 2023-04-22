@@ -119,7 +119,7 @@ app.get("/admin", function(req, res){
                       if(t._id.task3 !== null)
                       avgtime = t.time;
                     })
-                    res.render("admin", {totalusers:totuser, activeusers: task1, avgtime: avgtime, users: records, rank1: rank1[0]});
+                    res.render("admin", {totalusers:totuser, activeusers: task1, avgtime: Math.ceil(avgtime), users: records, rank1: rank1[0]});
                   })
                   .catch(error => {
                     console.log(error)
