@@ -1,0 +1,44 @@
+<%- include('partials/header') %>
+
+<center>
+  <!-- <br> -->
+  <h2 style="padding: 10px;">Leaderboard</h2>
+<table class="tab-border">
+  <tr>
+    <th class="tablepad thcolor txt-center">Rank</th>
+    <th class="tablepad thcolor txt-center">UserName</th>
+    <th class="tablepad thcolor txt-center">Rating</th>
+    <th class="tablepad thcolor txt-center">Time</th>
+  </tr>
+  <% var count = 1 %>
+<% res.forEach(function(user){ %>
+      
+      <% if(typeof (user.star) !== 'undefined') { %>
+      <tr class="tab-tr-border">
+        <td>
+          <p class="txt-center"><%= count %></p>
+        </td>
+        <td class="tablepad">
+          <p class="txt-center"><%=user.username%></p>
+        </td>
+        <td class="tablepad">
+          <% if(user.star === 3){ %>
+            <p class="leaderboardstar">&#9733; &#9733; &#9733;</p>
+          <% }else if(user.star === 2){ %>
+            <p class="leaderboardstar" >&#9733; &#9733;</p>
+          <% } else { %>
+            <p class="leaderboardstar" >&#9733;</p>
+          <% } %>  
+        </td>
+        <td>
+          <p class="txt-center"><%= user.time %> s</p>
+        </td>
+      </tr>
+      <% count = count+1; %>
+      <% } %>
+
+      <% }) %>
+    </table>
+  </center>
+
+<%- include('partials/footer') %>

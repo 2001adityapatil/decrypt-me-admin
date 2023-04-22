@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <div style="width: 350px; height: 150px; display: inline-block;">
+        <div id="barchart">
+        </div>
+    </div>
+    <div style="width: 350px; height: 150px; display: inline-block;">
+        <div id="chart">
+        </div>
+    </div>
+
+</body>
+    <script>
+        var options = {
+  chart: {
+    type: 'bar'
+  },
+  series: [{
+    name: 'users',
+    data: [5, 2, 3]
+  }],
+  xaxis: {
+    categories: ["1 star", "2 star", "3 star"]
+  }
+}
+var chart = new ApexCharts(document.querySelector("#barchart"), options);
+chart.render();
+    </script>
+    
+    <script>
+         var options = {
+          series: [14, 11],
+          chart: {
+          width: 380,
+          type: 'pie',
+        },
+        labels: ['Total Users', 'Active Users'],
+        responsive: [{
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200
+            },
+            legend: {
+              position: 'bottom'
+            }
+          }
+        }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+</html>

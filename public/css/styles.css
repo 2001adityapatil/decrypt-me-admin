@@ -1,0 +1,41 @@
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.tablepad
+{
+  padding: 5px 30px;
+}
+
+.usersinfo
+{
+  background-color: gray; color: white; width: 23%; height: 100px; display: inline-block; padding: 5px 10px;
+}
+
+.thcolor
+{
+  background-color: gray;
+}
+
+.txt-center
+{
+  text-align: center;
+}
+
+.tab-border
+{
+  border: 1px solid white; width: 70%;
+}
+
+.tab-tr-border
+{
+  border: 1px solid white;
+}
+
+.leaderboardstar
+{
+  text-align: center; color: green;
+}
+
