@@ -38,18 +38,13 @@ body {
 {
   text-align: center; color: green;
 }
-@media only screen and (max-width: 1199px) {
-  /* For desktop: */
-.usersinfo
-{
-  background-color: gray; color: white; width: 23%; height: 90px; display: inline-block;
-}
-.container
-{
-  width: 80%;
-}  
 .h2size{
-  font-size: 20px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 515px) {
+  
+.h2size{
+  font-size: 15px;
 }
 
 }
